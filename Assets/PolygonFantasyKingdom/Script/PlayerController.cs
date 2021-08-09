@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class PlayerController : MonoBehaviour
     float pointFinish;
     bool isMoving = false;
     Coroutine movingCoroutine;
+    public GameObject UI;
+    public GameObject GroundCheck;
+    private bool isGround = true;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -27,9 +31,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         rb.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Speed * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&& isGround)
         {
             Jump();
+            isGround = false;
         }
    
         if (Input.GetKeyDown(KeyCode.A)&& pointFinish >-laneOffset)
@@ -74,7 +79,31 @@ public class PlayerController : MonoBehaviour
         }
         rb.velocity = Vector3.zero;
         transform.position = new Vector3(pointFinish, transform.position.y, transform.position.z);
-
         isMoving = false;
     }
+
+
+   public void Replay()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        UI.SetActive(false);
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "DeadPlayer")
+        {
+            UI.SetActive(true);
+            Time.timeScale = 0;
+            Debug.Log("DeadPlayer");
+        }
+        if (GroundCheck.gameObject.tag == "Ground")
+        {
+            isGround = true;
+            Debug.Log("Test2222");
+        }
+    }
+
+   
 }
