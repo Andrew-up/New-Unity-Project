@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 47008245}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,6 +517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Castle_Roof_M_Curved_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1435811466178666, guid: e596668f597d2084b8e0ba77993d25ce, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4849864795348950, guid: e596668f597d2084b8e0ba77993d25ce, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -737,7 +741,7 @@ GameObject:
   - component: {fileID: 160912002}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,7 +1639,7 @@ GameObject:
   - component: {fileID: 430932803}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3118,10 +3122,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 1.6881721
   m_Direction: 1
-  m_Center: {x: 0, y: 0.8329135, z: 0}
+  m_Center: {x: 0, y: 0.8329135, z: 0.27}
 --- !u!114 &709002156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3135,8 +3139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneChangeSpeed: 15
-  Speed: 12
+  Speed: 15
   UI: {fileID: 703670088}
+  GroundCheck: {fileID: 1271981212}
 --- !u!54 &709002157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3153,6 +3158,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &709002158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709002152}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.61291045, y: 0.5327976, z: 0.91141593}
+  m_Center: {x: 0, y: 0.26963174, z: 0.5178091}
 --- !u!4 &709943203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4836269766734494, guid: 6f12d15fa441ca045a597687db81dd6f,
@@ -3319,6 +3337,10 @@ PrefabInstance:
     - target: {fileID: 1098222522617662, guid: 6e22efa820c49ea459764a5e57edd79b, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Castle_Floor_Wood_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098222522617662, guid: 6e22efa820c49ea459764a5e57edd79b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4270316608465070, guid: 6e22efa820c49ea459764a5e57edd79b, type: 3}
       propertyPath: m_RootOrder
@@ -3608,6 +3630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ground_Ramp_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1623500973738942, guid: 3a279e6d101803e4b8112667c23b3730, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4989672020280364, guid: 3a279e6d101803e4b8112667c23b3730, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -3655,6 +3681,11 @@ PrefabInstance:
     - target: {fileID: 4989672020280364, guid: 3a279e6d101803e4b8112667c23b3730, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64850337311958052, guid: 3a279e6d101803e4b8112667c23b3730,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a279e6d101803e4b8112667c23b3730, type: 3}
@@ -3749,6 +3780,10 @@ PrefabInstance:
     - target: {fileID: 1098222522617662, guid: 6e22efa820c49ea459764a5e57edd79b, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Castle_Floor_Wood_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098222522617662, guid: 6e22efa820c49ea459764a5e57edd79b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4270316608465070, guid: 6e22efa820c49ea459764a5e57edd79b, type: 3}
       propertyPath: m_RootOrder
@@ -4397,7 +4432,7 @@ GameObject:
   - component: {fileID: 1055724568}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4735,7 +4770,7 @@ GameObject:
   - component: {fileID: 1132619091}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4967,6 +5002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Castle_Floor_Wood_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1425470892372866, guid: faadd9d98aa1fe647aaf4f25cdf314b3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4390566536307450, guid: faadd9d98aa1fe647aaf4f25cdf314b3, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -5091,9 +5130,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1271981213}
+  - component: {fileID: 1271981214}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: IsJump
+  m_TagString: Ground
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5106,12 +5146,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271981212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.301, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.206, z: 0}
+  m_LocalScale: {x: 1, y: 0.33850375, z: 1}
   m_Children: []
   m_Father: {fileID: 709002154}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1271981214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271981212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 2, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1276540178
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,7 +5245,7 @@ GameObject:
   - component: {fileID: 1280263733}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5287,7 +5340,7 @@ GameObject:
   - component: {fileID: 1299321293}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6002,6 +6055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Castle_Floor_Wood_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1098222522617662, guid: 6e22efa820c49ea459764a5e57edd79b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4270316608465070, guid: 6e22efa820c49ea459764a5e57edd79b, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -6071,6 +6128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Ground_Ramp_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1623500973738942, guid: 3a279e6d101803e4b8112667c23b3730, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4989672020280364, guid: 3a279e6d101803e4b8112667c23b3730, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -6114,6 +6175,11 @@ PrefabInstance:
     - target: {fileID: 4989672020280364, guid: 3a279e6d101803e4b8112667c23b3730, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64850337311958052, guid: 3a279e6d101803e4b8112667c23b3730,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a279e6d101803e4b8112667c23b3730, type: 3}
@@ -6210,7 +6276,7 @@ GameObject:
   - component: {fileID: 1464748785}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6305,7 +6371,7 @@ GameObject:
   - component: {fileID: 1479143294}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6660,7 +6726,7 @@ GameObject:
   - component: {fileID: 1579770144}
   m_Layer: 0
   m_Name: Cube (13)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7447,7 +7513,7 @@ GameObject:
   - component: {fileID: 1724535005}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7749,7 +7815,7 @@ GameObject:
   - component: {fileID: 1821301626}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8000,7 +8066,7 @@ GameObject:
   - component: {fileID: 1892292123}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9004,7 +9070,7 @@ GameObject:
   - component: {fileID: 2084730466}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
